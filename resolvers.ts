@@ -41,7 +41,7 @@ export const resolvers = {
 
                 const urls = id.map((i) => `https://hp-api.onrender.com/api/character/${i}`);
 
-                const data = await fetch(urls);
+                const data = await fetch(urls[0]);
 
                 if(data.status != 200) throw new GraphQLError("Api Error");
 
